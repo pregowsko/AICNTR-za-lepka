@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 200;
+}
+
+img {
+  width: 170px;
+  height: auto;
+  max-width: 600px;
+}
+
+.row {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-top: -32px;
+  margin-left: -50px;
+}
+
+.row:nth-child(even) {
+  margin-left: 2px;
+}
+
+:root {
+  --hexagon-width: 100px;
+  --hexagon-height: 110px;
+}
+
+.hexagon {
+  width: var(--hexagon-width);
+  height: var(--hexagon-height);
+  margin: 2px;
+  background-color: #111;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-animation: animation 4s linear infinite;
+          animation: animation 4s linear infinite;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.hexagon:hover {
+  background-color: #0f0;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  right: 4px;
+  background-color: #111;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-animation: animation 4s linear infinite;
+          animation: animation 4s linear infinite;
+}
+
+@-webkit-keyframes animation {
+  0% {
+    -webkit-filter: hue-rotate(0);
+            filter: hue-rotate(0);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes animation {
+  0% {
+    -webkit-filter: hue-rotate(0);
+            filter: hue-rotate(0);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+@media (min-width: 576px) {
+  img {
+    width: 180px;
+  }
+}
+@media (min-width: 768px) {
+  img {
+    width: 230px;
+  }
+}
+@media (min-width: 992px) {
+  img {
+    width: 280px;
+  }
+}
+@media (min-width: 1200px) {
+  img {
+    width: 320px;
+  }
+}/*# sourceMappingURL=main.css.map */
